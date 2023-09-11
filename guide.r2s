@@ -1,0 +1,31 @@
+# Radare2 Guide On Slides
+--label:title
+
+This is a guide to radare2.
+
+`?E Hello, username!`
+
+Radare2 is a second incarnation of a reverse engineering framework,
+written by pancake and community in course of the last X years.
+
+Let's start from smol and disassemble some hexpairs
+
+Here are bytes: 20 00 80 52
+
+And here is a result of command "pad 20 00 80 52"
+
+`?ef `pad 20 00 80 52``
+
+--gotokey:i:insert
+Press 'n' for next slide (or the spacebar)
+Press 'p' for previous slide
+`?e= 1`
+
+# Topics
+
+Basic coverage of topics:
+
+* Navigating
+* Displaying
+
+`?e= 2`
