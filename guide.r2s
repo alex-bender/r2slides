@@ -16,16 +16,62 @@ And here is a result of command "pad 20 00 80 52"
 
 `?ef `pad 20 00 80 52``
 
---gotokey:i:insert
+--gotokey:t:toc
 Press 'n' for next slide (or the spacebar)
 Press 'p' for previous slide
 `?e= 1`
 
-# Topics
-
+# Table of Contents
+--label:toc
 Basic coverage of topics:
 
-* Navigating
+* Writing
 * Displaying
+--gotokey:w:writing
+--gotokey:d:displaying
 
-`?e= 2`
+
+# Prepare the sample
+
+Let's create a simple function to demonstrate some basic consepts
+behind radare2.
+
+First, let's configure r2:
+
+Set architecture. We need to be on the same page, regardles on what arch
+you're running r2. Let's see what we have:
+
+Type
+
+> e?asm.arch
+
+to see what this config dedicated for
+
+then see what options there are with
+
+> e asm.arch=?
+
+Select x86
+
+> e asm.arch=x86
+
+Pressing V will display what we currently have in  (WHERE?)
+
+`px`
+
+# Writing
+--label:writing
+
+Now lets write some assembly.
+
+> wa nop
+
+You will get message
+
+`?ef INFO: Written 1 byte(s) (nop) = wx 90 @ 0x00000000`
+
+And now let's see what we just did with command pd
+
+> pd 1
+
+`pd 1`
